@@ -15,7 +15,7 @@ def ft_archive_creation() -> None:
 
     print("Initializing new storage unit: ", file)
     f = open(file, "w")
-    print("Storage unit created successfully..."+ "\n")
+    print("Storage unit created successfully..." + "\n")
 
     print("Inscribing preservation data...")
     for line in text:
