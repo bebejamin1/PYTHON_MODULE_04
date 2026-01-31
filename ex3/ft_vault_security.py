@@ -1,0 +1,42 @@
+#! /bin/python3.10
+
+# =============================================================================
+# ================================= TEXT ======================================
+# =============================================================================
+
+
+def ft_vault_security() -> None:
+    file1 = "classified_data.txt"
+    file2 = "security_protocols.txt"
+
+    print("Initiating secure vault access...")
+    print("Vault connection established with failsafe protocols")
+
+    print("\n" + "SECURE EXTRACTION:")
+    try:
+        with open(file1, "r") as file:
+            content = file.read()
+            print(content)
+    except FileNotFoundError:
+        print(f"🚨​ No such file or directory: '{file1}'")
+
+    print("\n" + "SECURE EXTRACTION:")
+    try:
+        with open(file2, "r") as file:
+            content = file.read()
+            print(content)
+    except FileNotFoundError:
+        print(f"🚨​ No such file or directory: '{file2}'")
+
+    print("Vault automatically sealed upon completion")
+
+
+# =============================================================================
+# ================================= TEXT ======================================
+# =============================================================================
+
+
+if __name__ == "__main__":
+    print(" CYBER ARCHIVES - VAULT SECURITY SYSTEM ".center(79, "=") + "\n")
+    ft_vault_security()
+    print("\n" + "All vault operations completed with maximum security.")
