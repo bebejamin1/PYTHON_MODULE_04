@@ -10,11 +10,12 @@ def ft_crisis_response() -> None:
              "classified_vault.txt",
              "standard_archive.txt"
              ]
+
     for file in files:
         try:
             print("\n" + f"CRISIS ALERT: Attempting access to '{file}'...")
             with open(file, 'r') as f:
-                content = f.read()
+                print(f.read())
         except FileNotFoundError:
             print("RESPONSE: Archive not found in storage matrix")
             print("STATUS: Crisis handled, system stable")
@@ -22,7 +23,7 @@ def ft_crisis_response() -> None:
             print("RESPONSE: Security protocols deny access")
             print("STATUS: Crisis handled, security maintained")
         else:
-            print(f"SUCCESS: Archive recovered - \"{content}\"")
+            print(f"SUCCESS: Archive recovered - \"{f.read()}\"")
             print("STATUS: Normal operations resumed")
 
 
