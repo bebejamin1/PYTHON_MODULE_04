@@ -13,18 +13,20 @@ def ft_crisis_response() -> None:
 
     for file in files:
         try:
-            print("\n" + f"CRISIS ALERT: Attempting access to '{file}'...")
             with open(file, 'r') as f:
-                print(f.read())
+                print("\n" + "ROUTINE ACCESS: "
+                      f"Attempting access to '{file}'...")
+                print(f"SUCCESS: Archive recovered - \"{f.read()}\"")
+                print("STATUS: Normal operations resumed")
         except FileNotFoundError:
+            print("\n" + f"CRISIS ALERT: Attempting access to '{file}'...")
             print("RESPONSE: Archive not found in storage matrix")
             print("STATUS: Crisis handled, system stable")
         except PermissionError:
+            print("\n" + f"CRISIS ALERT: Attempting access to '{file}'...")
             print("RESPONSE: Security protocols deny access")
             print("STATUS: Crisis handled, security maintained")
-        else:
-            print(f"SUCCESS: Archive recovered - \"{f.read()}\"")
-            print("STATUS: Normal operations resumed")
+        # else:
 
 
 # =============================================================================

@@ -22,6 +22,7 @@ def ft_archive_creation() -> None:
         f.write(line + "\n")
         print(line)
     f.close()
+
     print("\n" + "Data inscription complete. Storage unit sealed.")
     print(f"Archive '{file}' ready for long-term preservation.")
 
