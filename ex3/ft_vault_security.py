@@ -19,15 +19,16 @@ def ft_vault_security() -> None:
             print(f1.read())
     except FileNotFoundError:
         print(f"🚨​ No such file or directory: '{file1}'")
+    # print(f1.closed)
 
     print("\n" + "SECURE EXTRACTION:")
     try:
         with open(file2, "w") as f2:
             f2.write(text)
             print(text)
-
     except FileNotFoundError:
         print(f"🚨​ No such file or directory: '{file2}'")
+    # print(f2.closed)
 
     print("Vault automatically sealed upon completion")
 

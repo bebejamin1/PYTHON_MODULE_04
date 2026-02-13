@@ -26,7 +26,6 @@ def ft_crisis_response() -> None:
             print("\n" + f"CRISIS ALERT: Attempting access to '{file}'...")
             print("RESPONSE: Security protocols deny access")
             print("STATUS: Crisis handled, security maintained")
-        # else:
 
 
 # =============================================================================
